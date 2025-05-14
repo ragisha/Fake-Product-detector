@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Qrcode</title>
+        <style>
+body{
+    margin: 10px;
+    padding: 20px;
+    font-family: montserrat;
+    background: url(qr.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.box{
+background: #f5f5f5;
+color: rgb(0, 0, 0);
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box;
+padding: 20px 35px;
+}
+
+input[type="text"], input[type="password"] ,input[type="email"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #673ab7;
+    font-size: 16px;
+
+}
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #0097a7;
+}
+        </style>
+    </head>
+    <body>
+    <div class="box">
+    
+
+        <h1><b>QR-Code Content</b></h1>
+        <form  name="GRcode"  method="POST">
+
+            <p>Company name</p>
+            <input type="text" name="uname1"  required="">
+
+            <p>Product Name</p>
+            <input type="text" name="email"  required="">
+
+            <p>Content to be displayed in qrcode</p>
+            <textarea name="message" rows="5" cols="20">
+                </textarea>
+            <br>
+                <input type="submit" name="" value="Create excel">
+            <br>
+            <a href="home.html">Back</a>
+        </form>
+
+    </div>
+    <script>
+    
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwMhRQbcSjQAK1FIlB3rRSnY4tEjgFcVmGX1Ltb8OMFqHdKyvk/exec"
+                const form = document.forms['GRcode'] 
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)},alert("Success"))
+                    .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.mim.js"></script>
+    </body>
+</html>

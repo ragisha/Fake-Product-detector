@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background: url("crys.jpg");
+    background-position: top;
+    background-size: cover;
+    
+}
+.box{
+    background: #fdd8f4;
+    color: rgb(231, 31, 107);
+    top: 50%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 300px;
+    padding: 30px 25px;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+.container{
+    height: 100vh;
+    display: flex;
+}
+section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all .5s;
+}
+section:hover{
+ flex: 2;   
+}
+section h1{
+    background: rgba(0,0,0,0,6);
+    color: whitesmoke;
+    padding: 12px 32px;
+}
+
+.reg{
+    background: url('im1.jpg') #ff0909;
+    background-position: right;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.qrr{
+    background: url('im2.jpg') #d2ff09;
+    background-position: right;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.exi{
+    background: url('im3.jpg') #09ff78;
+    background-position: left;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+input{
+    width: 100%;
+    margin-bottom: 5px;
+}
+ input[type="text"], input[type="password"] ,input[type="email"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #673ab7;
+    font-size: 16px;
+}
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #0097a7;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Download QR-Code</title>
+        <style>
+            body{
+                background: url(ex.jpg);
+                background-position: cover;
+            }
+            input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #d41010;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+        </style>
+    </head>
+    <body>
+        <form action="qrPup.py" method="POST">
+           <!-- {% csrf_token %}  -->
+           <center>
+            <input type="submit" value="Download Code">
+        </center>
+            <!-- {{data_external}} <br><br>
+            {{data1}} -->
+            <br><br>
+           
+        </form>
+    </body>
+</html>
